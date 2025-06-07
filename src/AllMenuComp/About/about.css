@@ -1,0 +1,78 @@
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.about-content {
+    animation: fadeIn 2s ease-in-out;
+    max-width: 800px;
+}
+
+.about-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: slideInFromLeft 1.5s ease-in-out;
+}
+
+.about-description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    animation: slideInFromRight 1.5s ease-in-out;
+}
+
+.skills-title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2rem;
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+.skills-list li {
+    margin: 10px 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
