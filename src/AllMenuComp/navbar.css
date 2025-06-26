@@ -2,14 +2,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: red;
+  background-color: #0087ff69;
   /* padding: 8px 10px; */
 }
 
 .logo {
-  color: white;
-  font-size: 1.5rem;
-  font-weight: bold;
+  color: rgb(0, 0, 0);
+  /* font-size: 1.5rem; */
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  width: 260px;
+  height: 30px;
+  margin: 5px;
+  background-color: #ffffff;
+  /* font-weight: bold; */
+ 
 }
 
 .nav-links {
@@ -24,7 +32,13 @@
 .nav-links a {
   text-decoration: none;
   color: white;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  transition: color 0.8s ease;
+}
+.nav-links a:hover {
+  text-decoration: none;
+  color: black;
+  /* //font-size: 1.5rem; */
 }
 
 .mobile-menu-icon {
@@ -51,7 +65,7 @@
     position: absolute;
     top: 50px;
     right: 20px;
-    background-color: #333;
+    background-color: white;
     padding: 10px;
     border-radius: 5px;
   }
@@ -63,4 +77,23 @@
   .mobile-menu-icon {
     display: block;
   }
+
+}
+
+.search-container {
+  position: relative;
+  display: inline-block;
+}
+
+.inputstyle.logo {
+  padding-left: 35px; /* space for the icon */
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  pointer-events: none;
 }
