@@ -243,3 +243,48 @@
   overflow: hidden;
   /* ...existing code... */
 }
+
+.floating-img-row {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.floating-img-row-top {
+  top: 10px;
+}
+
+.floating-img-row-bottom {
+  bottom: 10px;
+}
+
+@media (min-width: 700px) {
+  .floating-img-row {
+    position: static;
+    display: contents;
+  }
+  .floating-img {
+    position: absolute;
+  }
+}
+.floating-img {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18), 0 1.5px 6px rgba(0,0,0,0.10);
+  border-radius: 12px;
+  pointer-events: none;
+  animation: float 3.5s ease-in-out infinite;
+  opacity: 0.92;
+  transition: transform 0.3s;
+  /* Remove position absolute for mobile, keep for desktop */
+  position: static;
+}
+
+@media (min-width: 700px) {
+  .floating-img {
+    position: absolute;
+  }
+}
